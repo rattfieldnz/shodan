@@ -1,0 +1,26 @@
+language: php
+php:
+  - 7.2
+  - 7.3
+before_script:
+  - cp .env.travis .env
+  - chmod u+x run_phpunit
+  - travis_retry composer self-update
+  - travis_retry composer install --prefer-source --no-interaction
+before_install:
+  - mysql -e 'CREATE DATABASE shodan_test;'
+script:
+  - ./run_phpunit
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+services:
+  - mysql
+notifications:
+  email: false
+env:
+  global:
+    - USE_NETWORK=true
+    - secure:
+  matrix:
+    - USE_NETWORK=true
+    - secure:

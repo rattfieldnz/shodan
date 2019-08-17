@@ -1,0 +1,51 @@
+build:
+  environment:
+    php:
+      version: 7.2
+      # variables:
+      # DO NOT ADD YOUR KEY IN THIS FILE! DO IT SECURELY INSTEAD @ https://scrutinizer-ci.com/g/YOURGITHUBUSERNAME/YOUR-REPO/settings/build-config.
+      # SHODAN_API_KEY: YoUrShOdAnApIkEy (Get your key from https://developer.shodan.io/).
+  nodes:
+    analysis:
+      project_setup:
+        override:
+          - 'true'
+      tests:
+        override:
+          - php-scrutinizer-run --enable-security-analysis
+          -
+            command: phpcs-run
+            use_website_config: true
+        before:
+          - 'chmod u+x run_phpunit'
+          - command: './run_phpunit'
+            idle_timeout: 600
+            background: false
+    tests: true
+
+checks:
+  php:
+    code_rating: true
+    remove_extra_empty_lines: true
+    remove_php_closing_tag: true
+    remove_trailing_whitespace: true
+    fix_use_statements:
+      remove_unused: true
+      preserve_multiple: false
+      preserve_blanklines: true
+      order_alphabetically: true
+    fix_php_opening_tag: true
+    fix_linefeed: true
+    fix_line_ending: true
+    fix_identation_4spaces: true
+    fix_doc_comments: true
+coding_style:
+  php:
+    spaces:
+      within:
+        brackets: true
+filter:
+  excluded_paths: [tests/*]
+tools:
+  external_code_coverage:
+    timeout: 600

@@ -1,0 +1,59 @@
+#!/bin/bash
+
+clear;
+
+# Second argument is test configuration and is required.
+if [ -z "$1" ] && [ -z "${GOOGLE_API_KEY}" ]; then
+  echo 'Please provide a Shodan API key.'
+  exit
+fi
+
+# Set Shodan API key for use with PHPUnit.
+if [ -z "${SHODAN_API_KEY}" ]; then
+  export SHODAN_API_KEY=${1}
+fi
+
+echo -e "Your Shodan API key is: ${SHODAN_API_KEY}.\n"
+
+sleep 2;
+
+echo -e "Now checking if XDebug is installed...\n";
+php -v | grep -q 'Xdebug';
+
+if [[ $? != 0 ]]; then
+
+  sleep 1;
+
+  echo -e "XDebug is not installed. Installing now...\n"
+
+  echo -e "Installing php-dev...\n";
+  sudo apt-get install php-dev -y > /dev/null 2>&1;
+
+  echo -e "Updating PECL channel...\n";
+  sudo pecl channel-update pecl.php.net > /dev/null 2>&1;
+
+  echo -e "Installing XDebug...\n";
+  sudo pecl pecl install xdebug > /dev/null 2>&1;
+
+  echo -e "Finished installing XDebug.\n"
+fi
+
+sleep 1;
+
+php -v | grep -q 'Xdebug';
+
+if [[ $? == 0 ]]; then
+  echo -e "XDebug is installed. Now running PHPUnit tests and generating code coverage report...\n"
+
+  vendor/bin/phpunit --coverage-clover coverage.xml;
+
+  wget https://scrutinizer-ci.com/ocular.phar > /dev/null 2>&1;
+  php ocular.phar code-coverage:upload --format=php-clover coverage.xml > /dev/null 2>&1;
+  rm ocular.phar;
+
+  echo -e "\nPHPUnit testing and code coverage reports now completed!"
+else
+  echo -e "\nPHPUnit testing could not be done - XDebug is not installed!"
+fi
+
+
