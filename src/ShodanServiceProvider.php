@@ -22,7 +22,7 @@ class ShodanServiceProvider extends ServiceProvider
             'shodan'
         );
 
-        $this->app->bind('shodan', function() {
+        $this->app->bind('shodan', function () {
             return new Shodan();
         });
     }
