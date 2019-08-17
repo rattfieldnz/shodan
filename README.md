@@ -1,13 +1,13 @@
 # Shodan
 
-[![Build Status](https://travis-ci.org/rattfieldnz/shodan.svg?branch=master)](https://travis-ci.org/rattfieldnz/shodan)
-[![styleci](https://styleci.io/repos/CHANGEME/shield)](https://styleci.io/repos/CHANGEME)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rattfieldnz/shodan/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rattfieldnz/shodan/?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/rattfieldnz/shodan/badge.svg?branch=master)](https://coveralls.io/github/rattfieldnz/shodan?branch=master)
-
-[![Packagist](https://img.shields.io/packagist/v/rattfieldnz/shodan.svg)](https://packagist.org/packages/rattfieldnz/shodan)
-[![Packagist](https://poser.pugx.org/rattfieldnz/shodan/d/total.svg)](https://packagist.org/packages/rattfieldnz/shodan)
-[![Packagist](https://img.shields.io/packagist/l/rattfieldnz/shodan.svg)](https://packagist.org/packages/rattfieldnz/shodan)
+[![PHP Version](https://img.shields.io/badge/php-7.3%2B-green.svg)](https://packagist.org/packages/rattfieldnz/shodan) [![PHP Version](https://img.shields.io/badge/php-7.2%2B-green.svg)](https://packagist.org/packages/rattfieldnz/shodan) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status][ico-travis]][link-travis]
+[![StyleCI][ico-styleci]][link-styleci] 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rattfieldnz/shodan/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rattfieldnz/shodan/?branch=master) 
+[![codecov](https://codecov.io/gh/rattfieldnz/shodan/branch/master/graph/badge.svg)](https://codecov.io/gh/rattfieldnz/shodan)
 
 Package description: A laravel package to check URLs with Shodan API.
 
@@ -57,3 +57,15 @@ instead of using the issue tracker.
 
 This package is bootstrapped with the help of
 [melihovv/laravel-package-generator](https://github.com/melihovv/laravel-package-generator).
+
+
+[ico-version]: https://img.shields.io/packagist/v/rattfieldnz/shodan.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/rattfieldnz/shodan.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/rattfieldnz/shodan/master.svg?style=flat-square
+[ico-styleci]: https://styleci.io/repos/202842370/shield
+
+[link-packagist]: https://packagist.org/packages/rattfieldnz/shodan
+[link-downloads]: https://packagist.org/packages/rattfieldnz/shodan
+[link-travis]: https://travis-ci.org/rattfieldnz/shodan
+[link-styleci]: https://styleci.io/repos/202842370
+[link-author]: https://github.com/rattfieldnz
