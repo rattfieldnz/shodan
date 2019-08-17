@@ -4,7 +4,6 @@ namespace RattfieldNz\Shodan;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
-use RattfieldNz\SafeUrls\SafeUrls;
 
 class ShodanServiceProvider extends ServiceProvider
 {
