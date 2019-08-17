@@ -2,6 +2,6 @@
 
 namespace RattfieldNz\Shodan;
 
-class Shodan{
-
+class Shodan
+{
 }
