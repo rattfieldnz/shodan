@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1566025809">
+  <project timestamp="1566025809">
+    <package name="RattfieldNz\Shodan\Facades">
+      <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/Facades/ShodanFacade.php">
+        <class name="RattfieldNz\Shodan\Facades\ShodanFacade" namespace="RattfieldNz\Shodan\Facades">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="2.00" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <metrics loc="13" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="RattfieldNz\Shodan">
+      <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/Shodan.php">
+        <class name="RattfieldNz\Shodan\Shodan" namespace="RattfieldNz\Shodan">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="7" ncloc="7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/ShodanServiceProvider.php">
+        <class name="RattfieldNz\Shodan\ShodanServiceProvider" namespace="RattfieldNz\Shodan">
+          <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="12" coveredelements="10"/>
+        </class>
+        <line num="11" type="method" name="boot" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="13" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="18" type="method" name="register" visibility="public" complexity="1" crap="1.00" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="12" coveredelements="10"/>
+      </file>
+    </package>
+    <metrics files="3" loc="49" ncloc="49" classes="2" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="9" elements="14" coveredelements="10"/>
+  </project>
+</coverage>

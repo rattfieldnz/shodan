@@ -1,6 +1,6 @@
 <?php
 
-namespace RattfieldNz\SafeUrls\Tests;
+namespace RattfieldNz\Shodan\Tests;
 
 use Illuminate\Foundation\Application;
 use Orchestra\Testbench\TestCase as Orchestra;
