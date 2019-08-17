@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class ShodanServiceProvider extends ServiceProvider
 {
-    const CONFIG_PATH = __DIR__ . '/../config/shodan.php';
+    const CONFIG_PATH = __DIR__.'/../config/shodan.php';
 
     public function boot()
     {
