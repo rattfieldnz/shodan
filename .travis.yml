@@ -1,26 +1,26 @@
 language: php
 php:
-  - 7.2
-  - 7.3
+- 7.2
+- 7.3
 before_script:
-  - cp .env.travis .env
-  - chmod u+x run_phpunit
-  - travis_retry composer self-update
-  - travis_retry composer install --prefer-source --no-interaction
+- cp .env.travis .env
+- chmod u+x run_phpunit
+- travis_retry composer self-update
+- travis_retry composer install --prefer-source --no-interaction
 before_install:
-  - mysql -e 'CREATE DATABASE shodan_test;'
+- mysql -e 'CREATE DATABASE shodan_test;'
 script:
-  - ./run_phpunit
+- "./run_phpunit"
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
 services:
-  - mysql
+- mysql
 notifications:
   email: false
 env:
   global:
-    - USE_NETWORK=true
-    - secure:
+  - USE_NETWORK=true
+  - secure: gG/0InS5etDtltYKI+Kai+njHerY5ULf0DyiquKyTR8RCZEaQrlHV6rjev58zKM6zgov1/lFrjgWhIekm6DHhH+5Wn7HH0i0xU/xtmVa5ovdRzdTh8DsE7vSNBpwWQWwruAjQFwtSah9kM4Iw6bjBHjWTjJxwFinvDQU35JF6idf2VpLTcSfHOljyV7JlRi7xcN4NIJmf5Eh3IS1omqeqc1QATkQFKVtcFHEBKLoBaje/CP21iLWOPJjK+pRE1DBsxtx66fV3zhV8fuaMFUNzZZ5Ed9Pwhyi9w7aS9WQjC6V63ouFoX6LeaXEQYO00kk2vQpQwxx+pZiw90069eQVJY+82KE4RVvY/Y7Tpm9us+H/k3n8npOt5toIK9i0zwyjTnfjWXT8rjYoF3UsHnJXwB3I3Ye8JSo3ta6+JG5YeUUggAS8Dhi3mKScR5HfPQeX9OjLD2Ntz+CVB14M1Uwz7Rxwe+AeLYKFWXfW3rCKOiwFkbgdPMG3vZe2YQedOuz8FNCLFkvTh3h6Y84VKJFF84JzQCppBuy6zriuJM1WPxfwlXdmyjRecp/HpvuNAttdtH49ywJNddzl/FZahZJTkBQLuM7e52yI0ReI3g9u4/C8y8PF8gj2XsxZtYS5nR+a+2zhxBmSMF9DxtEpfDpHgaM3wVGWAUEtoV51anAaNs=
   matrix:
-    - USE_NETWORK=true
-    - secure:
+  - USE_NETWORK=true
+  - secure: gG/0InS5etDtltYKI+Kai+njHerY5ULf0DyiquKyTR8RCZEaQrlHV6rjev58zKM6zgov1/lFrjgWhIekm6DHhH+5Wn7HH0i0xU/xtmVa5ovdRzdTh8DsE7vSNBpwWQWwruAjQFwtSah9kM4Iw6bjBHjWTjJxwFinvDQU35JF6idf2VpLTcSfHOljyV7JlRi7xcN4NIJmf5Eh3IS1omqeqc1QATkQFKVtcFHEBKLoBaje/CP21iLWOPJjK+pRE1DBsxtx66fV3zhV8fuaMFUNzZZ5Ed9Pwhyi9w7aS9WQjC6V63ouFoX6LeaXEQYO00kk2vQpQwxx+pZiw90069eQVJY+82KE4RVvY/Y7Tpm9us+H/k3n8npOt5toIK9i0zwyjTnfjWXT8rjYoF3UsHnJXwB3I3Ye8JSo3ta6+JG5YeUUggAS8Dhi3mKScR5HfPQeX9OjLD2Ntz+CVB14M1Uwz7Rxwe+AeLYKFWXfW3rCKOiwFkbgdPMG3vZe2YQedOuz8FNCLFkvTh3h6Y84VKJFF84JzQCppBuy6zriuJM1WPxfwlXdmyjRecp/HpvuNAttdtH49ywJNddzl/FZahZJTkBQLuM7e52yI0ReI3g9u4/C8y8PF8gj2XsxZtYS5nR+a+2zhxBmSMF9DxtEpfDpHgaM3wVGWAUEtoV51anAaNs=
