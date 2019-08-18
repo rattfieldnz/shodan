@@ -33,7 +33,7 @@ class ShodanServiceProvider extends ServiceProvider
 
         $this->app->alias(Shodan::class, 'shodan');
 
-        $this->app->bind('shodan', function() {
+        $this->app->bind('shodan', function () {
             return new Shodan();
         });
     }
@@ -45,7 +45,7 @@ class ShodanServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [ 'shodan' ];
+        return ['shodan'];
     }
 
     /**
@@ -61,7 +61,7 @@ class ShodanServiceProvider extends ServiceProvider
         ], 'shodan');
 
         // Registering package commands.
-        $this->commands([ 'shodan' ]);
+        $this->commands(['shodan']);
     }
 
     /**
@@ -74,8 +74,8 @@ class ShodanServiceProvider extends ServiceProvider
      */
     protected function mergeConfigFrom($path, $key)
     {
-        $config = $this->app[ 'config' ]->get($key, [ ]);
-        $this->app[ 'config' ]->set($key, $this->mergeConfig($config, require $path));
+        $config = $this->app['config']->get($key, []);
+        $this->app['config']->set($key, $this->mergeConfig($config, require $path));
     }
 
     /**
@@ -99,7 +99,7 @@ class ShodanServiceProvider extends ServiceProvider
             if (is_numeric($key)) {
                 continue;
             }
-            $array[ $key ] = $this->mergeConfig($value, $merging[ $key ]);
+            $array[$key] = $this->mergeConfig($value, $merging[$key]);
         }
 
         return $array;
