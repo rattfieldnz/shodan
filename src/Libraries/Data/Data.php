@@ -30,14 +30,15 @@ class Data
      */
     public function shodanApiUrl()
     {
-        return 'https://api.shodan.io/shodan/host/' . $this->_ip . '?key='.
+        return 'https://api.shodan.io/shodan/host/'.$this->_ip.'?key='.
             Config::shodanApiKey();
     }
 
     /**
      * Get IPv4 address from a URL.
      *
-     * @param  string $url
+     * @param string $url
+     *
      * @return string|null
      */
     public function getIp(string $url): string

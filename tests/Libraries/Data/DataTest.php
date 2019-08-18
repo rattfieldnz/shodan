@@ -23,7 +23,6 @@ class DataTest extends TestCase
         $this->_data = new Data($this->_url);
 
         $this->assertEquals($this->_url, $this->_data->getUrl());
-
     }
 
     public function testShodanApiUrl()
