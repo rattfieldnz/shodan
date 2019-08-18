@@ -41,10 +41,14 @@ class Data
      *
      * @return string|null
      */
-    public function getIp(string $url): string
+    public function getIp(string $url)
     {
-        $domain = parse_url($url)['host'];
-        $ip = gethostbyname($domain);
+        $domain = parse_url($url);
+        if(empty($domain['host'])){
+            return null;
+        }
+
+        $ip = gethostbyname($domain['host']);
 
         return filter_var($ip, FILTER_VALIDATE_IP) ? $ip : null;
     }

@@ -64,7 +64,7 @@ class Curl
     /**
      * Get the data retrieved from executing CURL request, in JSON format.
      *
-     * @return string
+     * @return array
      *
      * @see \RattfieldNz\SafeUrls\Libraries\Curl\Curl->execute().
      */
@@ -76,7 +76,7 @@ class Curl
             'response' => json_decode($dataObject->response, true),
         ];
 
-        return json_encode($data);
+        return $data;
     }
 
     /**

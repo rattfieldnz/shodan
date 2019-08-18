@@ -33,7 +33,8 @@ class CurlTest extends TestCase
 
     public function testApiCall()
     {
-        $data = json_decode($this->_curl->getData());
+        $data = json_encode($this->_curl->getData());
+        $data = json_decode($data);
 
         $this->assertEquals(200, $data->status);
         $this->assertEquals(null, $data->response->city);
