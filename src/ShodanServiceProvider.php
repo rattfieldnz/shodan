@@ -5,6 +5,12 @@ namespace RattfieldNz\Shodan;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class ShodanServiceProvider.
+ *
+ * @package RattfieldNz\Shodan
+ * @author Rob Attfield <emailme@robertattfield.com> <https://github.com/rattfieldnz>
+ */
 class ShodanServiceProvider extends ServiceProvider
 {
     const CONFIG_PATH = __DIR__.'/../config/shodan.php';

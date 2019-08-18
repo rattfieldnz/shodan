@@ -2,7 +2,8 @@ build:
   environment:
     php:
       version: 7.2
-      # variables:
+      variables:
+        SHODAN_REQUEST_TIMEOUT: 10
       # DO NOT ADD YOUR KEY IN THIS FILE! DO IT SECURELY INSTEAD @ https://scrutinizer-ci.com/g/YOURGITHUBUSERNAME/YOUR-REPO/settings/build-config.
       # SHODAN_API_KEY: YoUrShOdAnApIkEy (Get your key from https://developer.shodan.io/).
   nodes:
