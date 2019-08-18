@@ -11,6 +11,7 @@ use RattfieldNz\Shodan\Tests\TestCase;
 class DataTest extends TestCase
 {
     private $_url;
+    private $_ip;
     private $_data;
     private $_mock;
 
@@ -20,6 +21,9 @@ class DataTest extends TestCase
 
         $this->_url = 'https://www.robertattfield.com';
 
+        $domain = parse_url($this->_url)['host'];
+        $this->_ip = gethostbyname($domain);
+
         $this->_data = new Data($this->_url);
 
         $this->assertEquals($this->_url, $this->_data->getUrl());
@@ -27,7 +31,7 @@ class DataTest extends TestCase
 
     public function testShodanApiUrl()
     {
-        $expected = 'https://api.shodan.io/shodan/host/104.28.26.171?key='.
+        $expected = 'https://api.shodan.io/shodan/host/'.$this->_ip.'?key='.
             Config::shodanApiKey();
         $actual = $this->_data->shodanApiUrl();
         $this->assertEquals($expected, $actual);
@@ -35,7 +39,7 @@ class DataTest extends TestCase
 
     public function testGetIp()
     {
-        $expected = '104.28.26.171';
+        $expected = $this->_ip;
         $actual = $this->_data->getIp($this->_url);
         $this->assertEquals($expected, $actual);
     }

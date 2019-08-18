@@ -12,3 +12,4 @@ yarn-error.log
 ocular.phar
 ocular.phar.*
 .phpstorm.meta.php
+/report/debug.log
