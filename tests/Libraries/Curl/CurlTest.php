@@ -26,8 +26,7 @@ class CurlTest extends TestCase
             $this->_curl = new Curl($this->_data);
 
             parent::setUp();
-
-        } catch(\ErrorException $e){
+        } catch (\ErrorException $e) {
             $this->fail('Curl creation failed. Error message: '.$e->getMessage());
         }
     }
