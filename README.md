@@ -25,7 +25,7 @@ auto discovery feature.**
 
 Add service provider to `config/app.php` in `providers` section
 ```php
-RattfieldNz\Shodan\ShodanServiceProvide::class,
+RattfieldNz\Shodan\ShodanServiceProvider::class,
 ```
 
 ### Register Facade
