@@ -9,8 +9,6 @@ namespace RattfieldNz\Shodan\Libraries\Config;
  *
  * @author  Rob Attfield <emailme@robertattfield.com>
  * @license https://github.com/rattfieldnz/shodan/blob/master/LICENSE MIT
- *
- * @package RattfieldNz\Shodan\Libraries\Config
  */
 class Config
 {

@@ -7,12 +7,11 @@ use Illuminate\Support\ServiceProvider;
 
 /**
  * Class ShodanServiceProvider.
+ *
  * @category PHP
  *
  * @author  Rob Attfield <emailme@robertattfield.com>
  * @license https://github.com/rattfieldnz/shodan/blob/master/LICENSE MIT
- *
- * @package RattfieldNz\Shodan
  */
 class ShodanServiceProvider extends ServiceProvider
 {
