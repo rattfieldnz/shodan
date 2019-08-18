@@ -3,10 +3,14 @@
 namespace RattfieldNz\Shodan;
 
 /**
- * Class Shodan.
+ * Class Shodan
+ *
+ * @category PHP
+ *
+ * @author  Rob Attfield <emailme@robertattfield.com>
+ * @license https://github.com/rattfieldnz/shodan/blob/master/LICENSE MIT
  *
  * @package RattfieldNz\Shodan
- * @author Rob Attfield <emailme@robertattfield.com> <https://github.com/rattfieldnz>
  */
 class Shodan
 {
