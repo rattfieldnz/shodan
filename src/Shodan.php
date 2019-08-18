@@ -38,21 +38,22 @@ class Shodan
     {
         $this->_url = $url;
         $this->_data = new Data($this->_url);
+
         return $this;
     }
 
     /**
      * Checks a given URL with Shodan API.
      *
-     * @return Shodan
-     *
      * @throws ErrorException
+     *
+     * @return Shodan
      */
     public function check()
     {
         $error = [
-            'status' => 500,
-            'response' => 'URL cannot be null.'
+            'status'   => 500,
+            'response' => 'URL cannot be null.',
         ];
 
         $this->_results = empty($this->getUrl()) || empty($this->_data) ?
@@ -66,7 +67,8 @@ class Shodan
      *
      * @return string|null
      */
-    public function getUrl(){
+    public function getUrl()
+    {
         return $this->_url;
     }
 
@@ -74,13 +76,16 @@ class Shodan
      * Get results of Shodan API call.
      *
      * @param bool $jsonEncode Encode results as JSON, or
-     *             return as associative arrag.
+     *                         return as associative arrag.
+     *
      * @return mixed|null
      */
-    public function getResults(bool $jsonEncode = false){
-        if(empty($this->_results)){
-            return null;
+    public function getResults(bool $jsonEncode = false)
+    {
+        if (empty($this->_results)) {
+            return;
         }
+
         return $jsonEncode === false ?
             $this->_results : json_encode($this->_results);
     }

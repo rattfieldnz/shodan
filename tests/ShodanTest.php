@@ -31,7 +31,6 @@ class ShodanTest extends TestCase
         $actual = $this->_shodan->getUrl();
 
         $this->assertEquals($expected, $actual);
-
     }
 
     public function testGetUrl()
@@ -77,14 +76,15 @@ class ShodanTest extends TestCase
             ->getResults();
 
         $expected = [
-            'status' => 500,
-            'response' => 'URL cannot be null.'
+            'status'   => 500,
+            'response' => 'URL cannot be null.',
         ];
 
         $this->assertEquals($expected, $data);
     }
 
-    public function testCheckNullResults(){
+    public function testCheckNullResults()
+    {
         $data = $this->_shodan->getResults();
 
         $this->assertNull($data);
