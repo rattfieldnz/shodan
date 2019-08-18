@@ -3,7 +3,7 @@
 clear;
 
 # Second argument is test configuration and is required.
-if [ -z "$1" ] && [ -z "${GOOGLE_API_KEY}" ]; then
+if [ -z "$1" ] && [ -z "${SHODAN_API_KEY}" ]; then
   echo 'Please provide a Shodan API key.'
   exit
 fi

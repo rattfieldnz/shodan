@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1566100724">
-  <project timestamp="1566100724">
+<coverage generated="1566103684">
+  <project timestamp="1566103684">
     <package name="RattfieldNz\Shodan\Facades">
       <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/Facades/ShodanFacade.php">
         <class name="RattfieldNz\Shodan\Facades\ShodanFacade" namespace="RattfieldNz\Shodan\Facades" category="PHP">
@@ -30,32 +30,32 @@
         <class name="RattfieldNz\Shodan\Libraries\Curl\Curl" namespace="RattfieldNz\Shodan\Libraries\Curl" category="PHP">
           <metrics complexity="5" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="19" elements="25" coveredelements="22"/>
         </class>
-        <line num="34" type="method" name="__construct" visibility="public" complexity="2" crap="2.06" count="2"/>
-        <line num="36" type="stmt" count="2"/>
+        <line num="33" type="method" name="__construct" visibility="public" complexity="2" crap="2.06" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="0"/>
         <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="2"/>
         <line num="42" type="stmt" count="2"/>
         <line num="43" type="stmt" count="2"/>
         <line num="44" type="stmt" count="2"/>
         <line num="45" type="stmt" count="2"/>
-        <line num="46" type="stmt" count="2"/>
-        <line num="53" type="method" name="execute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="52" type="method" name="execute" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="54" type="stmt" count="1"/>
         <line num="55" type="stmt" count="1"/>
         <line num="56" type="stmt" count="1"/>
         <line num="57" type="stmt" count="1"/>
         <line num="58" type="stmt" count="1"/>
         <line num="59" type="stmt" count="1"/>
-        <line num="60" type="stmt" count="1"/>
-        <line num="62" type="stmt" count="1"/>
-        <line num="72" type="method" name="getData" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="74" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="71" type="method" name="getData" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="75" type="stmt" count="1"/>
         <line num="76" type="stmt" count="1"/>
-        <line num="77" type="stmt" count="1"/>
-        <line num="80" type="stmt" count="1"/>
-        <line num="88" type="method" name="_setDefaultHeaders" visibility="private" complexity="1" crap="1" count="2"/>
-        <line num="90" type="stmt" count="2"/>
-        <line num="94" type="stmt" count="2"/>
-        <metrics loc="95" ncloc="59" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="19" elements="25" coveredelements="22"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="87" type="method" name="_setDefaultHeaders" visibility="private" complexity="1" crap="1" count="2"/>
+        <line num="89" type="stmt" count="2"/>
+        <line num="93" type="stmt" count="2"/>
+        <metrics loc="94" ncloc="59" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="19" elements="25" coveredelements="22"/>
       </file>
     </package>
     <package name="RattfieldNz\Shodan\Libraries\Data">
@@ -129,6 +129,6 @@
         <metrics loc="107" ncloc="69" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="27" elements="36" coveredelements="31"/>
       </file>
     </package>
-    <metrics files="6" loc="340" ncloc="205" classes="5" methods="17" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="59" elements="82" coveredelements="72"/>
+    <metrics files="6" loc="339" ncloc="205" classes="5" methods="17" coveredmethods="13" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="59" elements="82" coveredelements="72"/>
   </project>
 </coverage>
