@@ -23,6 +23,7 @@ class DataTest extends TestCase
 
         $domain = parse_url($this->_url)['host'];
         $this->_ip = gethostbyname($domain);
+        $this->_ip = filter_var($this->_ip, FILTER_VALIDATE_IP) ? $this->_ip : null;
 
         $this->_data = new Data($this->_url);
 

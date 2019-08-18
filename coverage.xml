@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1566103684">
-  <project timestamp="1566103684">
+<coverage generated="1566105271">
+  <project timestamp="1566105271">
     <package name="RattfieldNz\Shodan\Facades">
       <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/Facades/ShodanFacade.php">
         <class name="RattfieldNz\Shodan\Facades\ShodanFacade" namespace="RattfieldNz\Shodan\Facades" category="PHP">
