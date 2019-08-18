@@ -44,8 +44,8 @@ class Data
     public function getIp(string $url)
     {
         $domain = parse_url($url);
-        if(empty($domain['host'])){
-            return null;
+        if (empty($domain['host'])) {
+            return;
         }
 
         $ip = gethostbyname($domain['host']);
