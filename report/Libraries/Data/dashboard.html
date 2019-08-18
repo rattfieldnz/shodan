@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /var/www/testproject/packages/rattfieldnz/shodan/src/Libraries/Config</title>
+  <title>Dashboard for /var/www/testproject/packages/rattfieldnz/shodan/src/Libraries/Data</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../../.css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../../.css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,7 @@
        <ol class="breadcrumb">
          <li class="breadcrumb-item"><a href="../../index.html">/var/www/testproject/packages/rattfieldnz/shodan/src</a></li>
          <li class="breadcrumb-item"><a href="../index.html">Libraries</a></li>
-         <li class="breadcrumb-item"><a href="index.html">Config</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Data</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -174,7 +174,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Method Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,4], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -224,7 +224,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[100,4,"<a href=\"Config.php.html#13\">RattfieldNz\\Shodan\\Libraries\\Config\\Config<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[100,5,"<a href=\"Data.php.html#15\">RattfieldNz\\Shodan\\Libraries\\Data\\Data<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -248,7 +248,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,2,"<a href=\"Config.php.html#23\">RattfieldNz\\Shodan\\Libraries\\Config\\Config::shodanApiKey<\/a>"],[100,2,"<a href=\"Config.php.html#35\">RattfieldNz\\Shodan\\Libraries\\Config\\Config::curlTimeout<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[100,1,"<a href=\"Data.php.html#20\">RattfieldNz\\Shodan\\Libraries\\Data\\Data::__construct<\/a>"],[100,1,"<a href=\"Data.php.html#31\">RattfieldNz\\Shodan\\Libraries\\Data\\Data::shodanApiUrl<\/a>"],[100,2,"<a href=\"Data.php.html#43\">RattfieldNz\\Shodan\\Libraries\\Data\\Data::getIp<\/a>"],[100,1,"<a href=\"Data.php.html#55\">RattfieldNz\\Shodan\\Libraries\\Data\\Data::getUrl<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);
