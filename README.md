@@ -78,6 +78,9 @@ Or:
 ```php
 Shodan::setUrl('https://github.com')->check()->getResults();
 ```
+## Example with input and output (associative array)
+
+View [EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md](https://github.com/rattfieldnz/safe-urls/blob/master/EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md).
 
 ## Security
 
