@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1566129724">
-  <project timestamp="1566129724">
+<coverage generated="1566201590">
+  <project timestamp="1566201590">
     <package name="RattfieldNz\Shodan\Facades">
       <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/Facades/ShodanFacade.php">
         <class name="RattfieldNz\Shodan\Facades\ShodanFacade" namespace="RattfieldNz\Shodan\Facades" category="PHP">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="17" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <metrics loc="21" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="17" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <metrics loc="21" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
     <package name="RattfieldNz\Shodan\Libraries\Config">
@@ -86,44 +86,44 @@
         <class name="RattfieldNz\Shodan\Shodan" namespace="RattfieldNz\Shodan" category="PHP">
           <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="19" coveredelements="19"/>
         </class>
-        <line num="25" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="27" type="stmt" count="5"/>
-        <line num="28" type="stmt" count="5"/>
+        <line num="25" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
         <line num="37" type="method" name="setUrl" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="39" type="stmt" count="4"/>
         <line num="40" type="stmt" count="4"/>
-        <line num="41" type="stmt" count="4"/>
-        <line num="51" type="method" name="check" visibility="public" complexity="3" crap="3" count="2"/>
-        <line num="54" type="stmt" count="2"/>
-        <line num="58" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="52" type="method" name="check" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="55" type="stmt" count="2"/>
         <line num="59" type="stmt" count="2"/>
-        <line num="61" type="stmt" count="2"/>
-        <line num="69" type="method" name="getUrl" visibility="public" complexity="1" crap="1" count="4"/>
-        <line num="70" type="stmt" count="4"/>
-        <line num="80" type="method" name="getResults" visibility="public" complexity="3" crap="3" count="3"/>
-        <line num="81" type="stmt" count="3"/>
-        <line num="82" type="stmt" count="1"/>
-        <line num="84" type="stmt" count="2"/>
-        <line num="85" type="stmt" count="2"/>
-        <metrics loc="87" ncloc="53" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="19" coveredelements="19"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="70" type="method" name="getUrl" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="72" type="stmt" count="4"/>
+        <line num="83" type="method" name="getResults" visibility="public" complexity="3" crap="3" count="3"/>
+        <line num="85" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="89" type="stmt" count="2"/>
+        <line num="90" type="stmt" count="2"/>
+        <metrics loc="92" ncloc="57" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="19" coveredelements="19"/>
       </file>
       <file name="/var/www/testproject/packages/rattfieldnz/shodan/src/ShodanServiceProvider.php">
         <class name="RattfieldNz\Shodan\ShodanServiceProvider" namespace="RattfieldNz\Shodan" category="PHP">
           <metrics complexity="10" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="27" elements="36" coveredelements="31"/>
         </class>
-        <line num="20" type="method" name="boot" visibility="public" complexity="1" crap="1" count="16"/>
-        <line num="22" type="stmt" count="16"/>
-        <line num="23" type="stmt" count="16"/>
-        <line num="24" type="stmt" count="16"/>
-        <line num="25" type="stmt" count="16"/>
-        <line num="27" type="method" name="register" visibility="public" complexity="1" crap="1.00" count="16"/>
-        <line num="29" type="stmt" count="16"/>
-        <line num="30" type="stmt" count="16"/>
-        <line num="31" type="stmt" count="16"/>
-        <line num="34" type="stmt" count="16"/>
+        <line num="20" type="method" name="boot" visibility="public" complexity="1" crap="1" count="17"/>
+        <line num="22" type="stmt" count="17"/>
+        <line num="23" type="stmt" count="17"/>
+        <line num="24" type="stmt" count="17"/>
+        <line num="25" type="stmt" count="17"/>
+        <line num="27" type="method" name="register" visibility="public" complexity="1" crap="1.00" count="17"/>
+        <line num="29" type="stmt" count="17"/>
+        <line num="30" type="stmt" count="17"/>
+        <line num="31" type="stmt" count="17"/>
+        <line num="34" type="stmt" count="17"/>
         <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="16"/>
-        <line num="39" type="stmt" count="16"/>
+        <line num="38" type="stmt" count="17"/>
+        <line num="39" type="stmt" count="17"/>
         <line num="46" type="method" name="provides" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="48" type="stmt" count="1"/>
         <line num="56" type="method" name="bootForConsole" visibility="public" complexity="1" crap="1" count="1"/>
@@ -132,13 +132,13 @@
         <line num="61" type="stmt" count="1"/>
         <line num="64" type="stmt" count="1"/>
         <line num="65" type="stmt" count="1"/>
-        <line num="75" type="method" name="mergeConfigFrom" visibility="protected" complexity="1" crap="1" count="16"/>
-        <line num="77" type="stmt" count="16"/>
-        <line num="78" type="stmt" count="16"/>
-        <line num="79" type="stmt" count="16"/>
-        <line num="89" type="method" name="mergeConfig" visibility="protected" complexity="5" crap="5.20" count="16"/>
-        <line num="91" type="stmt" count="16"/>
-        <line num="92" type="stmt" count="16"/>
+        <line num="75" type="method" name="mergeConfigFrom" visibility="protected" complexity="1" crap="1" count="17"/>
+        <line num="77" type="stmt" count="17"/>
+        <line num="78" type="stmt" count="17"/>
+        <line num="79" type="stmt" count="17"/>
+        <line num="89" type="method" name="mergeConfig" visibility="protected" complexity="5" crap="5.20" count="17"/>
+        <line num="91" type="stmt" count="17"/>
+        <line num="92" type="stmt" count="17"/>
         <line num="93" type="stmt" count="1"/>
         <line num="94" type="stmt" count="1"/>
         <line num="96" type="stmt" count="1"/>
@@ -146,10 +146,10 @@
         <line num="99" type="stmt" count="1"/>
         <line num="100" type="stmt" count="0"/>
         <line num="102" type="stmt" count="1"/>
-        <line num="105" type="stmt" count="16"/>
+        <line num="105" type="stmt" count="17"/>
         <metrics loc="107" ncloc="69" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="27" elements="36" coveredelements="31"/>
       </file>
     </package>
-    <metrics files="6" loc="415" ncloc="255" classes="6" methods="22" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="75" elements="103" coveredelements="93"/>
+    <metrics files="6" loc="420" ncloc="259" classes="6" methods="22" coveredmethods="19" conditionals="0" coveredconditionals="0" statements="81" coveredstatements="76" elements="103" coveredelements="95"/>
   </project>
 </coverage>

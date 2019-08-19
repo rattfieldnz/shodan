@@ -1,15 +1,9 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
+vendor
 .env
 .env.backup
 .phpunit.result.cache
-npm-debug.log
-yarn-error.log
 .php_cs.cache
 ocular.phar
 ocular.phar.*
 .phpstorm.meta.php
-/report/debug.log
+report/debug.log
