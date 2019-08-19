@@ -59,7 +59,7 @@
         "RattfieldNz\\Shodan\\ShodanServiceProvider"
       ],
       "aliases": {
-        "Shodan": "RattfieldNz\\Shodan\\Facades\\SafeUrlsShodan"
+        "Shodan": "RattfieldNz\\Shodan\\Facades\\ShodanFacade"
       }
     },
     "config": {

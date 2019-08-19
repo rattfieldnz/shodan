@@ -23,7 +23,7 @@ composer require rattfieldnz/shodan
 **Note! This and next step are optional if you use laravel>=5.5 with package
 auto discovery feature.**
 
-Add service provider to `config/app.php` in `providers` section
+Add service provider to `config/app.php` in `providers` section.
 ```php
 RattfieldNz\Shodan\ShodanServiceProvider::class,
 ```
@@ -38,12 +38,46 @@ RattfieldNz\Shodan\Facades\ShodanFacade::class,
 ### Publish Configuration File
 
 ```bash
-php artisan vendor:publish --provider="RattfieldNz\Shodan\ShodanServiceProvider" --tag="config"
+php artisan vendor:publish --provider="RattfieldNz\Shodan\ShodanServiceProvider" --tag="shodan"
+```
+
+### Set your Shodan API key
+
+In your `.env`, add:
+
+```bash
+SHODAN_API_KEY=YOUR-ACTUAL-API-KEY
+SHODAN_REQUEST_TIMEOUT=10
 ```
 
 ## Usage
 
-T.B.A, after further development.
+### Using Blade Syntax
+
+```php
+@if(isset(Shodan::setUrl('https://github.com')->check()->getResults()))
+    // Iterate over associative array results.
+    // getResults(true) returns results as JSON-encoded string.
+@else
+    <p>No results were found</p>
+@endif
+```
+
+`getResults(true)` returns results as JSON-encoded string.
+
+### Using Facades
+
+```php
+Shodan::setUrl('https://github.com');
+Shodan::check();
+Shodan::getResults();
+```
+
+Or:
+
+```php
+Shodan::setUrl('https://github.com')->check()->getResults();
+```
 
 ## Security
 

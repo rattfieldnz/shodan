@@ -76,14 +76,14 @@ class Shodan
      * Get results of Shodan API call.
      *
      * @param bool $jsonEncode Encode results as JSON, or
-     *                         return as associative arrag.
+     *                         return as associative array.
      *
      * @return mixed|null
      */
     public function getResults(bool $jsonEncode = false)
     {
         if (empty($this->_results)) {
-            return;
+            return null;
         }
 
         return $jsonEncode === false ?
