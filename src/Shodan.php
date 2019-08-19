@@ -83,7 +83,7 @@ class Shodan
     public function getResults(bool $jsonEncode = false)
     {
         if (empty($this->_results)) {
-            return null;
+            return;
         }
 
         return $jsonEncode === false ?
