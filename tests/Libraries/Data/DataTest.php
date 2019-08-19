@@ -21,8 +21,8 @@ class DataTest extends TestCase
 
         $this->_url = 'https://www.robertattfield.com';
 
-        //$domain = parse_url($this->_url)['host'];
-        $this->_ip = '104.28.26.171';
+        $domain = parse_url($this->_url)['host'];
+        $this->_ip = gethostbyname($domain);
         $this->_ip = filter_var($this->_ip, FILTER_VALIDATE_IP) ? $this->_ip : null;
 
         $this->_data = new Data($this->_url);
