@@ -40,6 +40,4 @@ class ShodanFacadeTest extends TestCase
     {
         parent::tearDown();
     }
-
-
 }
