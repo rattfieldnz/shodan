@@ -62,10 +62,10 @@ class CurlTest extends TestCase
         config(['shodan.shodan.api_key' => null]);
 
         $expected = [
-            "status" => 401,
-            "response" => [
-                "message" => "HTTP/1.1 401 Unauthorized"
-            ]
+            'status'   => 401,
+            'response' => [
+                'message' => 'HTTP/1.1 401 Unauthorized',
+            ],
         ]; // Shodan HTTP status if no valid key.
 
         $actual = $this->_curl->getData();
@@ -73,7 +73,6 @@ class CurlTest extends TestCase
         $this->assertEquals($expected, $actual);
 
         config(['shodan.shodan.api_key' => $originalEnv]);
-
     }
 
     public function testPhpCurlExtensionLoaded()
