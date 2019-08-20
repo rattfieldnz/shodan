@@ -19,9 +19,11 @@ class ShodanServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->publishes([
+        $this->publishes(
+            [
             self::CONFIG_PATH => config_path('shodan.php'),
-        ], 'config');
+            ], 'config'
+        );
     }
 
     public function register()
@@ -33,9 +35,11 @@ class ShodanServiceProvider extends ServiceProvider
 
         $this->app->alias(Shodan::class, 'shodan');
 
-        $this->app->bind('shodan', function () {
-            return new Shodan();
-        });
+        $this->app->bind(
+            'shodan', function () {
+                return new Shodan();
+            }
+        );
     }
 
     /**
@@ -56,9 +60,11 @@ class ShodanServiceProvider extends ServiceProvider
     public function bootForConsole()
     {
         // Publishing the configuration file.
-        $this->publishes([
+        $this->publishes(
+            [
             __DIR__.'/../config/shodan.php' => config_path('shodan.php'),
-        ], 'shodan');
+            ], 'shodan'
+        );
 
         // Registering package commands.
         $this->commands(['shodan']);
@@ -75,7 +81,7 @@ class ShodanServiceProvider extends ServiceProvider
     protected function mergeConfigFrom($path, $key)
     {
         $config = $this->app['config']->get($key, []);
-        $this->app['config']->set($key, $this->mergeConfig($config, require $path));
+        $this->app['config']->set($key, $this->mergeConfig($config, include $path));
     }
 
     /**
