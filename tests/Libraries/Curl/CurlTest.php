@@ -55,6 +55,27 @@ class CurlTest extends TestCase
         $this->assertNotEmpty($data->response->data);
     }
 
+    public function testApiCallHttpErrorNoShodanApiKey()
+    {
+        $originalEnv = config('shodan.shodan.api_key');
+
+        config(['shodan.shodan.api_key' => null]);
+
+        $expected = [
+            "status" => 401,
+            "response" => [
+                "message" => "HTTP/1.1 401 Unauthorized"
+            ]
+        ]; // Shodan HTTP status if no valid key.
+
+        $actual = $this->_curl->getData();
+
+        $this->assertEquals($expected, $actual);
+
+        config(['shodan.shodan.api_key' => $originalEnv]);
+
+    }
+
     public function testPhpCurlExtensionLoaded()
     {
         $this->assertTrue(extension_loaded('curl'));

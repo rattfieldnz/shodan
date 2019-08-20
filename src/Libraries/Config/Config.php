@@ -24,7 +24,7 @@ class Config
     {
         $key = config('shodan.shodan.api_key');
 
-        return !empty($key) ? $key : env('SHODAN_API_KEY');
+        return !empty($key) ? $key : null;
     }
 
     /**

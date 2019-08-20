@@ -71,9 +71,17 @@ class Curl
     public function getData()
     {
         $dataObject = $this->execute();
+
+        $status = $dataObject->getHttpStatus();
+
+        $response = $dataObject->error_code != 0 ?
+            ['message' => $dataObject->error_message] :
+            json_decode($dataObject->response, true);
+
+
         $data = [
-            'status'   => $dataObject->getHttpStatus(),
-            'response' => json_decode($dataObject->response, true),
+            'status'   => $status,
+            'response' => $response,
         ];
 
         return $data;
