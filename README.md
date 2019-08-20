@@ -82,6 +82,10 @@ Shodan::setUrl('https://github.com')->check()->getResults();
 
 View [EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md](https://github.com/rattfieldnz/shodan/blob/master/EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md).
 
+## Example with input and output (JSON)
+
+View [EXAMPLE_INPUT_OUTPUT_JSON.md](https://github.com/rattfieldnz/shodan/blob/master/EXAMPLE_INPUT_OUTPUT_JSON.md).
+
 ## Security
 
 If you discover any security related issues, please email emailme@robertattfield.com
