@@ -9,16 +9,29 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rattfieldnz/shodan/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rattfieldnz/shodan/?branch=master) 
 [![codecov](https://codecov.io/gh/rattfieldnz/shodan/branch/master/graph/badge.svg)](https://codecov.io/gh/rattfieldnz/shodan)
 
-Package description: A laravel package to check URLs with Shodan API.
+A laravel package to check URLs with Shodan API.
 
-## Installation
+* [Installation](#installation)
+  * [Register Service Provider](#register_service_provider)
+  * [Register Facade](#register_facade)
+  * [Publish Configuration File](#publish_config_file)
+  * [Set your Shodan API key](#set_shodan_api_key)
+* [Usage](#usage)
+  * [Using Blade Syntax](#using_blade_syntax)
+  * [Using Facades](#using_facades)
+* [Example with input and output (associative array)](#example_input_output_associative_array)
+* [Example with input and output (JSON)](#example_input_output_json)
+* [Security](#security)
+* [Credits](#credits)
+
+## <a id="installation"></a>Installation
 
 Install via composer
 ```bash
 composer require rattfieldnz/shodan
 ```
 
-### Register Service Provider
+### <a id="register_service_provider"></a>Register Service Provider
 
 **Note! This and next step are optional if you use laravel>=5.5 with package
 auto discovery feature.**
@@ -28,20 +41,20 @@ Add service provider to `config/app.php` in `providers` section.
 RattfieldNz\Shodan\ShodanServiceProvider::class,
 ```
 
-### Register Facade
+### <a id="register_facade"></a>Register Facade
 
 Register package facade in `config/app.php` in `aliases` section
 ```php
 RattfieldNz\Shodan\Facades\ShodanFacade::class,
 ```
 
-### Publish Configuration File
+### <a id="publish_config_file"></a>Publish Configuration File
 
 ```bash
 php artisan vendor:publish --provider="RattfieldNz\Shodan\ShodanServiceProvider" --tag="shodan"
 ```
 
-### Set your Shodan API key
+### <a id="set_shodan_api_key"></a>Set your Shodan API key
 
 In your `.env`, add:
 
@@ -50,9 +63,9 @@ SHODAN_API_KEY=YOUR-ACTUAL-API-KEY
 SHODAN_REQUEST_TIMEOUT=10
 ```
 
-## Usage
+## <a id="usage"></a>Usage
 
-### Using Blade Syntax
+### <a id="using_blade_syntax"></a>Using Blade Syntax
 
 ```php
 @if(isset(Shodan::setUrl('https://github.com')->check()->getResults()))
@@ -65,7 +78,7 @@ SHODAN_REQUEST_TIMEOUT=10
 
 `getResults(true)` returns results as JSON-encoded string.
 
-### Using Facades
+### <a id="using_facades"></a>Using Facades
 
 ```php
 Shodan::setUrl('https://github.com');
@@ -78,20 +91,20 @@ Or:
 ```php
 Shodan::setUrl('https://github.com')->check()->getResults();
 ```
-## Example with input and output (associative array)
+## <a id="example_input_output_associative_array"></a>Example with input and output (associative array)
 
 View [EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md](https://github.com/rattfieldnz/shodan/blob/master/EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md).
 
-## Example with input and output (JSON)
+## <a id="example_input_output_json"></a>Example with input and output (JSON)
 
 View [EXAMPLE_INPUT_OUTPUT_JSON.md](https://github.com/rattfieldnz/shodan/blob/master/EXAMPLE_INPUT_OUTPUT_JSON.md).
 
-## Security
+## <a id="security"></a>Security
 
 If you discover any security related issues, please email emailme@robertattfield.com
 instead of using the issue tracker.
 
-## Credits
+## <a id="credits"></a>Credits
 
 - [Robert Attfield](https://github.com/rattfieldnz/shodan)
 - [All contributors](https://github.com/rattfieldnz/shodan/graphs/contributors)
