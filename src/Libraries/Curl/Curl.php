@@ -78,7 +78,6 @@ class Curl
             ['message' => $dataObject->error_message] :
             json_decode($dataObject->response, true);
 
-
         $data = [
             'status'   => $status,
             'response' => $response,
