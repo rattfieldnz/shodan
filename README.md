@@ -14,6 +14,7 @@ A laravel package to check URLs with Shodan API.
 * [Installation](#installation)
   * [Register Service Provider](#register_service_provider)
   * [Register Facade](#register_facade)
+  * [Register Facade](#register_facade)
   * [Publish Configuration File](#publish_config_file)
   * [Set your Shodan API key](#set_shodan_api_key)
 * [Usage](#usage)
@@ -21,6 +22,7 @@ A laravel package to check URLs with Shodan API.
   * [Using Facades](#using_facades)
 * [Example with input and output (associative array)](#example_input_output_associative_array)
 * [Example with input and output (JSON)](#example_input_output_json)
+* [Testing](#testing)
 * [Security](#security)
 * [Credits](#credits)
 
@@ -98,6 +100,16 @@ View [EXAMPLE_INPUT_OUTPUT_ASSOCIATIVEARRAY.md](https://github.com/rattfieldnz/s
 ## <a id="example_input_output_json"></a>Example with input and output (JSON)
 
 View [EXAMPLE_INPUT_OUTPUT_JSON.md](https://github.com/rattfieldnz/shodan/blob/master/EXAMPLE_INPUT_OUTPUT_JSON.md).
+
+## <a id="testing"></a>Testing
+
+From inside the root folder of this package:
+
+``` bash
+$ chmod u+x run_phpunit && ./run_phpunit YOUR_SHODAN_API_KEY
+```
+Replace YOUR_SHODAN_API_KEY with your actual key. Get one by visiting [https://developer.shodan.io/api](https://developer.shodan.io/api).
+
 
 ## <a id="security"></a>Security
 
