@@ -21,8 +21,9 @@ class ShodanServiceProvider extends ServiceProvider
     {
         $this->publishes(
             [
-            self::CONFIG_PATH => config_path('shodan.php'),
-            ], 'config'
+                self::CONFIG_PATH => config_path('shodan.php'),
+            ],
+            'config'
         );
     }
 
@@ -36,7 +37,8 @@ class ShodanServiceProvider extends ServiceProvider
         $this->app->alias(Shodan::class, 'shodan');
 
         $this->app->bind(
-            'shodan', function () {
+            'shodan',
+            function () {
                 return new Shodan();
             }
         );
@@ -62,8 +64,9 @@ class ShodanServiceProvider extends ServiceProvider
         // Publishing the configuration file.
         $this->publishes(
             [
-            __DIR__.'/../config/shodan.php' => config_path('shodan.php'),
-            ], 'shodan'
+                __DIR__.'/../config/shodan.php' => config_path('shodan.php'),
+            ],
+            'shodan'
         );
 
         // Registering package commands.
