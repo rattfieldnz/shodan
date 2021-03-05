@@ -18,7 +18,7 @@ class ShodanTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->_url = 'https://www.robertattfield.com';
+        $this->_url = 'https://shodan.io';
         $this->_data = new Data($this->_url);
         $this->_shodan = new Shodan();
     }
@@ -56,7 +56,7 @@ class ShodanTest extends TestCase
         $this->assertEquals('Cloudflare', $data->response->isp);
         $this->assertEquals(null, $data->response->area_code);
         $this->assertEquals(null, $data->response->dma_code);
-        $this->assertEquals('USA', $data->response->country_code3);
+        $this->assertEquals(null, $data->response->country_code3);
         $this->assertEquals('United States', $data->response->country_name);
         $this->assertEquals([], $data->response->hostnames);
         $this->assertEquals(null, $data->response->postal_code);

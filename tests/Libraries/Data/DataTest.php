@@ -19,7 +19,7 @@ class DataTest extends TestCase
     {
         parent::setUp();
 
-        $this->_url = 'https://www.robertattfield.com';
+        $this->_url = 'https://shodan.io';
 
         $domain = parse_url($this->_url)['host'];
         $this->_ip = gethostbyname($domain);

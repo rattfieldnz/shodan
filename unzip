@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# See https://stackoverflow.com/questions/65149298/composer-2-0-8-issue-package-versions-deprecated
+    
+/usr/bin/unzip "$@"
+sleep 0.5

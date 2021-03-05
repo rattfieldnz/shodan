@@ -18,7 +18,7 @@ class CurlTest extends TestCase
     protected function setUp(): void
     {
         try {
-            $this->_url = 'https://www.robertattfield.com';
+            $this->_url = 'https://shodan.io';
             $domain = parse_url($this->_url)['host'];
             $this->_ip = gethostbyname($domain);
 
@@ -35,6 +35,7 @@ class CurlTest extends TestCase
     {
         $data = json_encode($this->_curl->getData());
         $data = json_decode($data);
+		//dd($data->response->country_code3);
 
         $this->assertEquals(200, $data->status);
         $this->assertEquals(null, $data->response->city);
@@ -44,13 +45,13 @@ class CurlTest extends TestCase
         $this->assertEquals('Cloudflare', $data->response->isp);
         $this->assertEquals(null, $data->response->area_code);
         $this->assertEquals(null, $data->response->dma_code);
-        $this->assertEquals('USA', $data->response->country_code3);
+        $this->assertEquals(null, $data->response->country_code3);
         $this->assertEquals('United States', $data->response->country_name);
         $this->assertEquals([], $data->response->hostnames);
         $this->assertEquals(null, $data->response->postal_code);
         $this->assertEquals(-97.822, $data->response->longitude);
         $this->assertEquals('US', $data->response->country_code);
-        $this->assertEquals(37.751000000000005, $data->response->latitude);
+        $this->assertEquals(37.751, $data->response->latitude);
         $this->assertEquals('Cloudflare', $data->response->org);
         $this->assertNotEmpty($data->response->data);
     }
