@@ -31,7 +31,7 @@ class ShodanServiceProviderTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    protected function setUp():void
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -50,7 +50,8 @@ class ShodanServiceProviderTest extends TestCase
         )->andReturnNull();
 
         $this->appMock->shouldReceive('alias')->with(
-            Shodan::class, 'shodan'
+            Shodan::class,
+            'shodan'
         )->andReturnNull();
 
         $this->assertNull($this->provider->register());
